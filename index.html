@@ -5,26 +5,29 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
 
 </head>
 
 <body>
-
-    <div id="output"></div>
-    <div id="map"></div>
-    <div id="grid">
-        <p id="lat"></p>
-        <p id="lng"></p>
-    </div>
-    <div id="loadingScreen">
-        <div id="loading" class="clearFix">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+    <main>
+        <h1>Aktualna pozycja międzynarodowej stacji kosmicznej</h1>
+        <div id="output"></div>
+        <div id="map"></div>
+        <div id="grid">
+            <p id="lat"></p>
+            <p id="lng"></p>
         </div>
-    </div>
+        <div id="loadingScreen">
+            <div id="loading" class="clearFix">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </main>
 </body>
 
 <script src="script.js"></script>

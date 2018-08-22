@@ -3,6 +3,32 @@
     padding: 0;
 }
 
+    background-image: url(issfoto.jpg);
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+main {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(9, 12, 31, 0.9);
+    height: 100vh;
+    max-width: 1200px;
+
+}
+
+h1 {
+    font-size: 4vh;
+    text-align: center;
+    line-height: 10vh;
+    text-transform: uppercase;
+    padding-top: 10vh;
+}
+
 #map {
     margin-top: 10vh;
     width: 60vw;
@@ -18,27 +44,24 @@
     display: block;
     width: 50vw;
     height: 10vh;
-    background-color: #ccc;
     margin: 20px auto;
-    border: 1px solid black;
-    font-family: arial;
+    border: 1px solid #fff;
 
 
 }
 
 #grid p {
-    text-align: center;
+    text-align: left;
     line-height: 5vh;
-    margin-left: 20px;
-    font-size: 4vh;
-    color: #222;
+    margin-left: 2vw;
+    font-size: 3vh;
 }
 
 #loadingScreen {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     top: 0;
     left: 0;
     z-index: 3;
@@ -46,11 +69,10 @@
 
 #loading {
 
-
+    position: absolute;
     width: 20vw;
     height: 10vw;
-    margin-left: auto;
-    margin-right: auto;
+    left: calc(50% - 5vw);
     margin-top: 25%;
 
 
