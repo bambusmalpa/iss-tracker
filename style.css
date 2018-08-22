@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    margin-top: 10vh;
+    width: 60vw;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+
+#grid {
+    display: block;
+    width: 50vw;
+    height: 10vh;
+    background-color: #ccc;
+    margin: 20px auto;
+    border: 1px solid black;
+    font-family: arial;
+
+
+}
+
+#grid p {
+    text-align: center;
+    line-height: 5vh;
+    margin-left: 20px;
+    font-size: 4vh;
+    color: #222;
+}
+
+#loadingScreen {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+#loading {
+
+
+    width: 20vw;
+    height: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25%;
+
+
+
+
+}
+
+.dot {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    margin-right: 1vw;
+    float: left;
+    animation: load 2s ease infinite;
+}
+
+.dot:nth-of-type(2) {
+    animation-delay: 0.20s;
+}
+
+.dot:nth-of-type(3) {
+    animation-delay: 0.50s;
+}
+
+@keyframes load {
+    0% {
+
+        background-color: #222;
+
+
+
+
+    }
+    50% {
+
+        background-color: #fff;
+
+
+
+
+    }
+
+}
+
+.clearFix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
