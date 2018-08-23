@@ -8,6 +8,8 @@ let map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
     zoom: 1,
+    animate: true,
+    easing: 0.5
 });
 
 function clean() {
@@ -60,9 +62,11 @@ function issPosZero() {
             .setLngLat([lng, lat])
             .addTo(map)
 
-
-
-
+        function stopLoading() {
+            let loading = document.getElementById("loadingScreen");
+            loading.style.display = "none";
+        }
+        stopLoading();
 
 
     }
@@ -77,14 +81,28 @@ function stopLoading() {
 
 function monitor() {
 
+    if (lat > 0) {
+        document.getElementById("lat").innerHTML = lat + " Szerokości geograficznej północnej";
+    } else {
+        lat = lat * -1;
+        document.getElementById("lat").innerHTML = lat + " Szerokości geograficznej południowej";
+    }
+    if (lng > 0) {
+        document.getElementById("lng").innerHTML = lng + " Długośći gegoraficznej wschodniej";
+    } else {
+        lng = lng * -1;
+        document.getElementById("lng").innerHTML = lng + " Długośći gegoraficznej zachodniej";
 
-    document.getElementById("lat").innerHTML = "Szerokość geograficzna: " + lat;
-    document.getElementById("lng").innerHTML = "Długość gegoraficzna: " + lng;
+    }
 }
 
-function zoom() {
+
+
+function center() {
     map.setCenter([lng, lat]);
-    map.setZoom(2);
+
+
+
 }
 
 
@@ -94,8 +112,7 @@ function zoom() {
 setInterval(function () {
 
     issPosition();
-    stopLoading()
-    zoom();
+    center();
     clean();
     issPosZero();
     monitor();

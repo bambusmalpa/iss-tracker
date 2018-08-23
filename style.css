@@ -25,7 +25,7 @@ main {
 h1 {
     font-size: 4vh;
     text-align: center;
-    line-height: 10vh;
+
     text-transform: uppercase;
     padding-top: 10vh;
 }
@@ -62,7 +62,7 @@ h1 {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     top: 0;
     left: 0;
     z-index: 3;
@@ -71,7 +71,7 @@ h1 {
 #loading {
 
     position: absolute;
-    width: 20vw;
+    width: 25vw;
     height: 10vw;
     left: calc(50% - 5vw);
     margin-top: 25%;
@@ -87,21 +87,27 @@ h1 {
     border-radius: 50%;
     margin-right: 1vw;
     float: left;
+    text-align: center;
+}
+
+.dot i {
+    display: block;
+    font-size: 3vw;
     animation: load 2s ease infinite;
 }
 
-.dot:nth-of-type(2) {
+.dot + div i {
     animation-delay: 0.20s;
 }
 
-.dot:nth-of-type(3) {
+.dot + div + div i {
     animation-delay: 0.50s;
 }
 
 @keyframes load {
     0% {
 
-        background-color: #222;
+        color: #222;
 
 
 
@@ -109,7 +115,7 @@ h1 {
     }
     50% {
 
-        background-color: #fff;
+        color: #fff;
 
 
 
@@ -122,4 +128,23 @@ h1 {
     display: block;
     content: "";
     clear: both;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3vw;
+    }
+
+    #grid p {
+        text-align: left;
+        line-height: 2vh;
+        margin-left: 2vw;
+        font-size: 1.5vh;
+
+    }
+
+    .dot {
+        font-size: 40px;
+        margin: 15vw;
+    }
 }
